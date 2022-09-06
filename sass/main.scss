@@ -1,0 +1,320 @@
+@import "colors";
+@import "typography";
+
+// SASS OVERRIDE
+
+$primary: $green;
+$secondary: $grey;
+$font-family-sans-serif: $font-family;
+
+$offcanvas-bg-color: $green;
+$offcanvas-color: $white;
+$btn-close-color: $shadowGreen;
+$offcanvas-backdrop-bg: $white;
+$offcanvas-backdrop-opacity: 0.8;
+
+$accordion-color: $white;
+$accordion-bg: $green;
+$accordion-border-width: 0;
+$accordion-border-color: transparent;
+$accordion-border-radius: 0;
+$accordion-icon-width: 2.5rem;
+$accordion-icon-active-color: $white;
+$accordion-icon-transform: none;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+$smBreakpoint: 768px;
+$mdBreakpoint: 992px;
+
+// Glogal defitions
+
+body {
+  background-color: $lightGrey !important;
+}
+main {
+  margin-top: 40px;
+}
+
+// NAV BAR
+
+.offcanvas-header .btn-close {
+  font-size: 2em;
+}
+
+.accordion-button {
+  &:hover {
+    background-color: $mediumGreen !important;
+  }
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $mediumGreen !important;
+}
+
+.accordion-button {
+  color: $white !important;
+  background-color: $green !important;
+}
+
+.accordion-item {
+  border-top: 1px solid $white !important;
+  &:first-child {
+    border-top: none !important;
+  }
+}
+
+.accordion-body {
+  padding: 16px 0px !important;
+  ul {
+    padding: 0px;
+    list-style-type: none;
+  }
+  li {
+    color: $white;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    padding: 0px 20px;
+    &:hover {
+      background-color: $mediumGreen;
+    }
+  }
+}
+
+.account-selector {
+  button {
+    opacity: 0.7;
+    border: none;
+    outline: 0px;
+    font-weight: bold;
+    color: $black;
+    background: transparent;
+    font-size: large;
+    margin: 12px 0px;
+  }
+  i {
+    color: $primary;
+    margin-top: 15px;
+  }
+  @media screen and (max-width: $mdBreakpoint) {
+    margin: 10px 0px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.account-acess {
+  input {
+    opacity: 0.5;
+    margin-top: 5px;
+    border: none;
+    border-bottom: solid 1px $black;
+    outline: 0px;
+    height: 30px;
+    cursor: pointer;
+    width: 250px;
+    ::placeholder {
+      margin-top: 10px;
+    }
+  }
+  i {
+    color: $primary;
+  }
+  i:last-child {
+    cursor: pointer;
+    font-size: x-large;
+  }
+  @media screen and (max-width: $mdBreakpoint) {
+    margin-bottom: 15px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.account-opening {
+  button {
+    outline: 0px;
+    color: $white;
+    background: $green;
+    font-size: medium;
+    padding: 5px 10px;
+    width: 180px;
+    height: 50px;
+    border: 1px solid $green;
+    border-radius: 5px;
+  }
+  @media screen and (max-width: $mdBreakpoint) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button {
+      width: 300px;
+      margin: 0px 10px;
+    }
+  }
+}
+
+.account-more {
+  height: 100%;
+  display: flex;
+  .button-search {
+    outline: 0px;
+    color: $white;
+    background: $shadowGreen;
+    font-size: medium;
+    padding: 5px 10px;
+    width: 80px;
+    height: 100%;
+    border: 1px solid $shadowGreen;
+    &:hover {
+      color: $white;
+      opacity: 0.8;
+    }
+  }
+  .btn-primary {
+    outline: 0px;
+    color: $white;
+    font-size: medium;
+    padding: 5px 10px;
+    width: 80px;
+    height: 100%;
+    background: $green;
+    border: 1px solid $green;
+    border-radius: 0;
+    font-size: 1.5em;
+    &:hover {
+      color: $white;
+      opacity: 0.8;
+    }
+    &:focus {
+      color: $white;
+      background: $green;
+      box-shadow: none;
+    }
+  }
+  i {
+    font-size: 2em;
+  }
+
+  @media screen and (max-width: $mdBreakpoint) {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .button-search {
+      height: 50px;
+      width: auto;
+    }
+    .btn-primary {
+      height: 50px;
+      width: auto;
+    }
+    i {
+      font-size: 1em;
+    }
+  }
+}
+
+.container-top {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: end;
+  background-color: $white !important;
+  gap: 50px;
+  @media screen and (max-width: $mdBreakpoint) {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 50px;
+  }
+  @media screen and (max-width: $smBreakpoint) {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+// Page body
+
+.first-content {
+  text-align: left;
+  h2 {
+    font-size: 3em;
+    color: $mediumGrey;
+    font-weight: bold;
+    @media screen and (max-width: $mdBreakpoint) {
+      font-size: 4vw;
+    }
+  }
+  span {
+    color: $green;
+  }
+  p {
+    font-size: 1em;
+    color: $mediumGrey;
+    @media screen and (max-width: $mdBreakpoint) {
+      font-size: 2vw;
+    }
+  }
+}
+
+.middle-content {
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    @media screen and (max-width: $mdBreakpoint) {
+      max-height: 60vh;
+    }
+  }
+}
+
+.last-content {
+  text-align: end;
+  h3 {
+    font-size: 3vw;
+    color: $green;
+  }
+  ul {
+    padding: 0px;
+    list-style-type: none;
+  }
+  li {
+    color: $mediumGrey;
+    height: 25px;
+    cursor: pointer;
+  }
+  h4 {
+    font-size: 2vw;
+    color: $grey;
+  }
+}
+
+.chipPix {
+  background-color: $lightYellow;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 25px;
+}
+
+.customAccordion {
+  border: none;
+  outline: 0px;
+  background-color: transparent;
+}
+
+.customAccordionBody {
+  @media screen and (max-width: $mdBreakpoint) {
+    display: none !important;
+  }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

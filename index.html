@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/boostrap/bootstrap-icons.css">
+  <title>My Bank</title>
+</head>
+
+<body>
+  <nav class="container-top">
+    <div class="account-selector">
+      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">Acessar conta com</button>
+      <i class="bi bi-caret-down-fill"></i>
+    </div>
+    <div class="account-acess">
+      <input class="custom-input" type="text" placeholder="CNPJ" aria-label="Text to search">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+    <div class="account-opening">
+      <button type="button" aria-expanded="false">Abra sua conta </button>
+    </div>
+    <div class="account-more">
+      <button type="button" class="button-search"><i class="bi bi-search"></i>
+        <span class="menu-stripe stripe-top"></span></button>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+        aria-controls="staticBackdrop"><i class="bi bi-list"></i></button>
+    </div>
+  </nav>
+  <aside class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel"> </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="accordion accordion" id="accordionInfo">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              <strong>Acesso Rápido</strong>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul>
+                <li>Localizar Agência</li>
+                <li>Fale Conosco</li>
+                <li>Política de Privacidade</li>
+                <li>2ª via de boleto</li>
+                <li>Trabalhe conosco</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <strong>Para Você</strong>
+            </button>
+          </h2>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTree" aria-expanded="true" aria-controls="collapseTree">
+              <strong>Para sua Empresa</strong>
+            </button>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="container">
+    <div class="row">
+      <div class="first-content col-lg-4">
+        <h2>Nós temos as melhores oportunidades <span>para você</span></h2>
+        <p>Somos o parceiro ideal para te acompanhar e ajudar em todas as suas conquistas. De forma responsável e
+          transparente, nós vamos juntos, organizar a sua vida financeira.</p>
+      </div>
+      <div class="middle-content col-lg-4">
+        <figure>
+          <img src="./assets/img/home-img.png" alt="business-woman">
+        </figure>
+      </div>
+      <div class="last-content col-lg-4">
+        <button class="customAccordion">
+          <h3>Para Você</h3>
+        </button>
+        <div class="customAccordionBody">
+          <ul>
+            <li>Conta Corrente</li>
+            <li>Cartões</li>
+            <li><span class="chipPix">Novo</span>Pix</li>
+            <li>Consórcios</li>
+            <li>Crédito</li>
+            <li>Investimentos</li>
+            <li>Pagamentos</li>
+            <li>Previdência</li>
+            <li>Máquina de Cartões</li>
+            <li>Seguros</li>
+            <li>Câmbio</li>
+            <li>Crédito</li>
+            <li>Certificado Digital</li>
+            <li>Momentos</li>
+          </ul>
+        </div>
+        <h4>Para sua Empresa</h4>
+        <h4>Para seu Agronegócio</h4>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/customAccordion.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
